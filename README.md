@@ -24,7 +24,14 @@ You need a valid PHPUnit 3.6 installation:
 
     pear install phpunit/PHPUnit
 
-You need to install Sahi if you want to test your website in a real browser.  
+And ofcourse, you need install Behat and Mink:
+
+    pear channel-discover pear.behat.org
+
+    pear install behat/behat
+    pear install behat/mink-beta
+
+Also, you need to install Sahi if you want to test your website in a real browser.  
 Download the Sahi jar from the [http://sahi.co.in/w/](Sahi website)
 
 ### Usage 
@@ -32,10 +39,6 @@ Download the Sahi jar from the [http://sahi.co.in/w/](Sahi website)
 Clone this repo:
 
     git clone https://github.com/knplabs/mink-demo
-
-Update Behat submodules:
-
-    git submodule update --init --recursive
 
 Launch sahi
 
@@ -45,9 +48,7 @@ Launch sahi
 Launch Behat: the two first tests should use Goutte.  
 The third one checks that the JS autocomplete field works on wikipedia: it uses Sahi!
 
-    ./behat
-    # or
-    php vendor/behat/bin/behat.php
+    behat
 
 You should see an output like:
 
@@ -78,5 +79,4 @@ You should see an output like:
     3 scenarios (3 passed)
     12 steps (12 passed)
     0m8.517s
-    
     
