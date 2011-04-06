@@ -1,6 +1,0 @@
-[submodule "vendor/behat"]
-	path = vendor/behat
-	url = https://github.com/Behat/Behat.git
-[submodule "vendor/mink"]
-	path = vendor/mink
-	url = https://github.com/Behat/Mink.git
