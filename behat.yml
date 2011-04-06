@@ -1,0 +1,7 @@
+default:
+    environment:
+        parameters:
+            start_url: http://en.wikipedia.org/
+imports:
+    - vendor/mink/behat.yml
+  
