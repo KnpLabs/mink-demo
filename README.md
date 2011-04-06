@@ -24,7 +24,7 @@ You need a valid PHPUnit 3.6 installation:
 
     pear install phpunit/PHPUnit
 
-And ofcourse, you need install Behat and Mink:
+And of course, you need to install Behat and Mink:
 
     pear channel-discover pear.behat.org
 
