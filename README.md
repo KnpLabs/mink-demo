@@ -72,10 +72,11 @@ You should see an output like:
       Scenario: Searching for a page with autocompletion           # features/search.feature:19
         Given I am on /wiki/Main_Page                              # vendor/mink/src/Behat/Mink/Integration/steps/mink_steps.php:15
         When I fill in "search" with "Behavior Driv"               # vendor/mink/src/Behat/Mink/Integration/steps/mink_steps.php:31
-        And I wait for 1 second                                    # features/steps/wait.php:9
+        And I wait for the suggestion box to appear                # features/steps/wait.php:5
         Then I should see "Behavior Driven Development"            # vendor/mink/src/Behat/Mink/Integration/steps/mink_steps.php:62
 
     3 scenarios (3 passed)
     12 steps (12 passed)
-    0m9.427s
+    0m8.517s
+    
     

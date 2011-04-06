@@ -1,9 +1,6 @@
 <?php
 
-$steps->And('/^I wait for (?P<time>\d+) (?P<unit>ms|s|secs?|seconds?|secs)$/', function($world, $time, $unit) {
-    if('s' === $unit[0]) {
-        $time *= 1000;
-    }
-    $world->getSession()->getDriver()->getClient()->wait($time, 'false');
+$steps->And('/^I wait for the suggestion box to appear$/', function($world) {
+    $world->getSession()->getDriver()->getClient()->wait(5000, "$('.suggestions-results').children().length > 0");
 });
 
