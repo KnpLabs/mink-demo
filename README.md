@@ -69,23 +69,23 @@ Feature: Search
   I need to be able to search for a word
 
   Scenario: Searching for a page that does exist               # features/search.feature:6
-    Given I am on /wiki/Main_Page                              # vendor/mink/src/Behat/Mink/Integration/steps/mink_steps.php:15
-    When I fill in "search" with "Behavior Driven Development" # vendor/mink/src/Behat/Mink/Integration/steps/mink_steps.php:31
-    And I press "searchButton"                                 # vendor/mink/src/Behat/Mink/Integration/steps/mink_steps.php:23
-    Then I should see "agile software development"             # vendor/mink/src/Behat/Mink/Integration/steps/mink_steps.php:62
+    Given I am on /wiki/Main_Page                              # Behat/Mink/Integration/steps/mink_steps.php:15
+    When I fill in "search" with "Behavior Driven Development" # Behat/Mink/Integration/steps/mink_steps.php:31
+    And I press "searchButton"                                 # Behat/Mink/Integration/steps/mink_steps.php:23
+    Then I should see "agile software development"             # Behat/Mink/Integration/steps/mink_steps.php:62
 
   Scenario: Searching for a page that does NOT exist           # features/search.feature:12
-    Given I am on /wiki/Main_Page                              # vendor/mink/src/Behat/Mink/Integration/steps/mink_steps.php:15
-    When I fill in "search" with "Glory Driven Development"    # vendor/mink/src/Behat/Mink/Integration/steps/mink_steps.php:31
-    And I press "searchButton"                                 # vendor/mink/src/Behat/Mink/Integration/steps/mink_steps.php:23
-    Then I should see "Search results"                         # vendor/mink/src/Behat/Mink/Integration/steps/mink_steps.php:62
+    Given I am on /wiki/Main_Page                              # Behat/Mink/Integration/steps/mink_steps.php:15
+    When I fill in "search" with "Glory Driven Development"    # Behat/Mink/Integration/steps/mink_steps.php:31
+    And I press "searchButton"                                 # Behat/Mink/Integration/steps/mink_steps.php:23
+    Then I should see "Search results"                         # Behat/Mink/Integration/steps/mink_steps.php:62
 
   @javascript
   Scenario: Searching for a page with autocompletion           # features/search.feature:19
-    Given I am on /wiki/Main_Page                              # vendor/mink/src/Behat/Mink/Integration/steps/mink_steps.php:15
-    When I fill in "search" with "Behavior Driv"               # vendor/mink/src/Behat/Mink/Integration/steps/mink_steps.php:31
+    Given I am on /wiki/Main_Page                              # Behat/Mink/Integration/steps/mink_steps.php:15
+    When I fill in "search" with "Behavior Driv"               # Behat/Mink/Integration/steps/mink_steps.php:31
     And I wait for the suggestion box to appear                # features/steps/ajax.php:5
-    Then I should see "Behavior Driven Development"            # vendor/mink/src/Behat/Mink/Integration/steps/mink_steps.php:62
+    Then I should see "Behavior Driven Development"            # Behat/Mink/Integration/steps/mink_steps.php:62
 
 3 scenarios (3 passed)
 12 steps (12 passed)
