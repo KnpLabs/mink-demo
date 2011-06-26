@@ -26,16 +26,7 @@ pear channel-discover pear.symfony-project.com
 pear install phpunit/PHPUnit
 ```
 
-And of course, you need to install Behat and Mink:
-
-``` bash
-pear channel-discover pear.behat.org
-
-pear install behat/behat
-pear install behat/mink-beta
-```
-
-Also, you need to install Sahi if you want to test your website in a real browser.  
+Also, you'll need to install Sahi if you want to test your website in a real browser.
 Download the Sahi jar from the [http://sahi.co.in/w/](Sahi website)
 
 ### Usage 
@@ -53,11 +44,11 @@ cd $YOUR_PATH_TO_SAHI/bin
 ./sahi.sh
 ```
 
-Launch Behat: the two first tests should use Goutte.  
+Launch Behat: the two first scenarios should use Goutte.
 The third one checks that the JS autocomplete field works on wikipedia: it uses Sahi!
 
 ``` bash
-behat
+php behat-2.0.0beta3.phar
 ```
 
 You should see an output like:
@@ -68,27 +59,26 @@ Feature: Search
   As a website user
   I need to be able to search for a word
 
-  Scenario: Searching for a page that does exist               # features/search.feature:6
-    Given I am on /wiki/Main_Page                              # Behat/Mink/Integration/steps/mink_steps.php:15
-    When I fill in "search" with "Behavior Driven Development" # Behat/Mink/Integration/steps/mink_steps.php:31
-    And I press "searchButton"                                 # Behat/Mink/Integration/steps/mink_steps.php:23
-    Then I should see "agile software development"             # Behat/Mink/Integration/steps/mink_steps.php:62
+  Scenario: Searching for a page that does exist
+    Given I am on /wiki/Main_Page
+    When I fill in "search" with "Behavior Driven Development"
+    And I press "searchButton"
+    Then I should see "agile software development"
 
-  Scenario: Searching for a page that does NOT exist           # features/search.feature:12
-    Given I am on /wiki/Main_Page                              # Behat/Mink/Integration/steps/mink_steps.php:15
-    When I fill in "search" with "Glory Driven Development"    # Behat/Mink/Integration/steps/mink_steps.php:31
-    And I press "searchButton"                                 # Behat/Mink/Integration/steps/mink_steps.php:23
-    Then I should see "Search results"                         # Behat/Mink/Integration/steps/mink_steps.php:62
+  Scenario: Searching for a page that does NOT exist
+    Given I am on /wiki/Main_Page
+    When I fill in "search" with "Glory Driven Development"
+    And I press "searchButton"
+    Then I should see "Search results"
 
   @javascript
-  Scenario: Searching for a page with autocompletion           # features/search.feature:19
-    Given I am on /wiki/Main_Page                              # Behat/Mink/Integration/steps/mink_steps.php:15
-    When I fill in "search" with "Behavior Driv"               # Behat/Mink/Integration/steps/mink_steps.php:31
-    And I wait for the suggestion box to appear                # features/steps/ajax.php:5
-    Then I should see "Behavior Driven Development"            # Behat/Mink/Integration/steps/mink_steps.php:62
+  Scenario: Searching for a page with autocompletion
+    Given I am on /wiki/Main_Page
+    When I fill in "search" with "Behavior Driv"
+    And I wait for the suggestion box to appear
+    Then I should see "Behavior Driven Development"
 
 3 scenarios (3 passed)
 12 steps (12 passed)
 0m8.517s
 ```
-

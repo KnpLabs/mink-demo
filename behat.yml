@@ -1,6 +1,4 @@
 default:
-    environment:
-        parameters:
-            start_url: http://en.wikipedia.org/
-imports:
-    - mink/behat.yml
+  context:
+    parameters:
+      base_url: http://en.wikipedia.org/
