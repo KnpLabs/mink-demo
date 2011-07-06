@@ -38,7 +38,7 @@ git clone https://github.com/knplabs/mink-demo
 
 Launch Behat: the two first scenarios should use Goutte.
 The third one checks that the JS autocomplete field works on wikipedia: it uses Sahi!
-but you've disabled it for quick start with `--tags` filter:
+but lets ignore it for a quick start with `--tags` filter:
 
 ``` bash
 php behat-2.0.0RC1.phar --tags ~@javascript
@@ -71,8 +71,8 @@ Feature: Search
 
 ### Sahi
 
-If you want to test `@javascript` part, you'll need to install Sahi. Sahi gives you ability to run
-`@javascript` scenarios in real browser.
+If you want to test `@javascript` part of feature, you'll need to install Sahi.
+Sahi gives you ability to run `@javascript` tagged scenarios in real browser.
 
 1. Download and run the Sahi jar from the [http://sahi.co.in/w/](Sahi website)
 2. Run sahi proxy before your test suites (you can start this proxy during system startup):
@@ -85,7 +85,7 @@ If you want to test `@javascript` part, you'll need to install Sahi. Sahi gives 
 Now if you run:
 
 ``` bash
-php behat-2.0.0RC1.phar --tags ~@javascript
+php behat-2.0.0RC1.phar
 ```
 
 you should see an output like:
