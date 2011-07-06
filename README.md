@@ -26,10 +26,7 @@ pear channel-discover pear.symfony-project.com
 pear install phpunit/PHPUnit
 ```
 
-Also, you'll need to install Sahi if you want to test your website in a real browser.
-Download the Sahi jar from the [http://sahi.co.in/w/](Sahi website)
-
-### Usage 
+## Usage 
 
 Clone this repo:
 
@@ -37,21 +34,59 @@ Clone this repo:
 git clone https://github.com/knplabs/mink-demo
 ```
 
-Launch sahi
-
-``` bash
-cd $YOUR_PATH_TO_SAHI/bin
-./sahi.sh
-```
-
 Launch Behat: the two first scenarios should use Goutte.
 The third one checks that the JS autocomplete field works on wikipedia: it uses Sahi!
+but you've disabled it for quick start with `--tags` filter:
 
 ``` bash
-php behat-2.0.0RC1.phar
+php behat-2.0.0RC1.phar --tags ~@javascript
 ```
 
 You should see an output like:
+
+``` gherkin
+Feature: Search
+  In order to see a word definition
+  As a website user
+  I need to be able to search for a word
+
+  Scenario: Searching for a page that does exist
+    Given I am on /wiki/Main_Page
+    When I fill in "search" with "Behavior Driven Development"
+    And I press "searchButton"
+    Then I should see "agile software development"
+
+  Scenario: Searching for a page that does NOT exist
+    Given I am on /wiki/Main_Page
+    When I fill in "search" with "Glory Driven Development"
+    And I press "searchButton"
+    Then I should see "Search results"
+
+3 scenarios (3 passed)
+12 steps (12 passed)
+0m8.517s
+```
+
+### Sahi
+
+If you want to test `@javascript` part, you'll need to install Sahi. Sahi gives you ability to run
+`@javascript` scenarios in real browser.
+
+1. Download and run the Sahi jar from the [http://sahi.co.in/w/](Sahi website)
+2. Run sahi proxy before your test suites (you can start this proxy during system startup):
+
+    ``` bash
+    cd $YOUR_PATH_TO_SAHI/bin
+    ./sahi.sh
+    ```
+
+Now if you run:
+
+``` bash
+php behat-2.0.0RC1.phar --tags ~@javascript
+```
+
+you should see an output like:
 
 ``` gherkin
 Feature: Search
@@ -82,3 +117,4 @@ Feature: Search
 12 steps (12 passed)
 0m8.517s
 ```
+
