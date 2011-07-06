@@ -48,7 +48,7 @@ Launch Behat: the two first scenarios should use Goutte.
 The third one checks that the JS autocomplete field works on wikipedia: it uses Sahi!
 
 ``` bash
-php behat-2.0.0beta3.phar
+php behat-2.0.0RC1.phar
 ```
 
 You should see an output like:
