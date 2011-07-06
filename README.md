@@ -26,6 +26,8 @@ pear channel-discover pear.symfony-project.com
 pear install phpunit/PHPUnit
 ```
 
+Behat doesn't care what you use to validate your steps. But Mink uses PHPUnit assertions internally!
+
 ## Usage 
 
 Clone this repo:
