@@ -16,7 +16,7 @@ Read [this article](http://www.knplabs.com/en/blog/one-mink-to-rule-them-all) to
 
 ### Requirements:
 
-You need a valid PHPUnit 3.6 installation:
+You need a valid PHPUnit 3.5 installation:
 
 ``` bash
 pear channel-discover pear.phpunit.de
