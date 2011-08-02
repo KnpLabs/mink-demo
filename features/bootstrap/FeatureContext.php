@@ -7,7 +7,7 @@ use Behat\Behat\Context\ClosuredContextInterface,
 use Behat\Gherkin\Node\PyStringNode,
     Behat\Gherkin\Node\TableNode;
 
-require_once __DIR__ . '/../../mink-1.0.0RC4.phar';
+require_once __DIR__ . '/../../mink-1.0.4.phar';
 
 /**
  * Features context.
