@@ -41,7 +41,7 @@ The third one checks that the JS autocomplete field works on wikipedia: it uses 
 but lets ignore it for a quick start with `--tags` filter:
 
 ``` bash
-php behat-2.0.1.phar --tags ~@javascript
+php behat-2.0.5.phar --tags ~@javascript
 ```
 
 You should see an output like:
@@ -85,7 +85,7 @@ Sahi gives you ability to run `@javascript` tagged scenarios in real browser.
 Now if you run:
 
 ``` bash
-php behat-2.0.1.phar
+php behat-2.0.5.phar
 ```
 
 you should see an output like:
