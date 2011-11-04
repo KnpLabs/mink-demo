@@ -36,12 +36,18 @@ Clone this repo:
 git clone https://github.com/knplabs/mink-demo
 ```
 
+Now download Behat and Mink phars:
+
+``` bash
+./install_vendors.sh
+```
+
 Launch Behat: the two first scenarios should use Goutte.
 The third one checks that the JS autocomplete field works on wikipedia: it uses Sahi!
 but lets ignore it for a quick start with `--tags` filter:
 
 ``` bash
-php behat-2.0.5.phar --tags ~@javascript
+php behat.phar --tags ~@javascript
 ```
 
 You should see an output like:
@@ -85,7 +91,7 @@ Sahi gives you ability to run `@javascript` tagged scenarios in real browser.
 Now if you run:
 
 ``` bash
-php behat-2.0.5.phar
+php behat.phar
 ```
 
 you should see an output like:
