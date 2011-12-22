@@ -1,3 +1,5 @@
-vendor
 *.jar
 sahi
+composer.lock
+composer.phar
+vendor
