@@ -1,0 +1,10 @@
+{
+    "require": {
+        "behat/behat": ">=2.2.2",
+        "behat/mink":  ">=1.3.2"
+    },
+
+    "repositories": {
+        "behat/deps": { "composer": { "url": "behat.org" } } 
+    }
+}
