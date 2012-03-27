@@ -33,7 +33,8 @@ Behat doesn't care what you use to validate your steps. But Mink uses PHPUnit as
 Clone this repo:
 
 ``` bash
-git clone https://github.com/knplabs/mink-demo
+git clone https://github.com/KnpLabs/mink-demo
+cd mink-demo
 ```
 
 Now install Behat, Mink and their dependencies:
