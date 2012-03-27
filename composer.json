@@ -9,7 +9,12 @@
             "type": "composer",
             "url": "behat.org"
         }
+    },
+
+    "recommend": {
+        "fabpot/goutte":                 "*",
+        "behat/sahi-client":             ">=1.0.1,<1.1-dev",
+        "alexandresalome/php-selenium":  "*",
+        "facebook/php-webdriver":        "*"
     }
-
-
 }
