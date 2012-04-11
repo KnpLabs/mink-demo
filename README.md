@@ -8,7 +8,7 @@ It defines a basic API through which you can talk with specific browser emulator
 
 Mink drivers define a bridge between Mink and those libraries.
 
-Read [this article](http://www.knplabs.com/en/blog/one-mink-to-rule-them-all) to know more about Mink.
+Read [this article](http://knplabs.com/en/blog/one-mink-to-rule-them-all) to know more about Mink.
 
 **This repository will allow you to easily try Mink and Behat to test… wikipedia.org!**
 
@@ -33,7 +33,7 @@ Behat doesn't care what you use to validate your steps. But Mink uses PHPUnit as
 Clone this repo:
 
 ``` bash
-git clone https://github.com/knplabs/mink-demo
+git clone https://github.com/KnpLabs/mink-demo
 ```
 
 Now install Behat, Mink and their dependencies:
@@ -130,4 +130,3 @@ Feature: Search
 3 scenarios (3 passed)
 12 steps (12 passed)
 ```
-
