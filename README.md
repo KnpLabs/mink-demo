@@ -1,4 +1,4 @@
-## !!! DEPRECATED. Use https://github.com/Behat/MinkExtension instead !!!
+## !!! DEPRECATED. Use https://github.com/Behat/MinkExtension-example instead !!!
 
 # A Behat+Mink Demo
 
