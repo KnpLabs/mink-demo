@@ -1,3 +1,5 @@
+## !!! DEPRECATED. Use https://github.com/Behat/MinkExtension instead !!!
+
 # A Behat+Mink Demo
 
 ## Mink
